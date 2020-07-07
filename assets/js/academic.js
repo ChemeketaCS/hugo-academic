@@ -469,7 +469,8 @@
       }
       if (diagramEnabled) {
         if (init) {
-          mermaid.initialize({theme: 'default', securityLevel: 'loose'});
+          mermaid.initialize({theme: 'default', securityLevel: 'loose', theme: 'forest'});
+          // themeCSS: "#subGraph0 { fill:white }  .node > rect { stroke:#00BCD4;} .cluster > rect { stroke:#E61E63;} .edgeLabel { display:block;opacity:1;background:white;border-radius:5px;padding:0px 10px;} .node { fill: azure } path { stroke-width: 1.5px; stroke: #00BCD4} polygon{ stroke-width: 1.5px; stroke: #00BCD4} text { fill:rgba(0, 0, 0, 0.65); font-size: 22px; transform: translateX(150px) translateY(40px) }"});
         } else {
           // Have to reload to re-initialise Mermaid with the new theme and re-parse the Mermaid code blocks.
           location.reload();
